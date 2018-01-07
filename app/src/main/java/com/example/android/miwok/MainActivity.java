@@ -32,18 +32,45 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         TextView numbersView = (TextView)findViewById(R.id.numbers);
-        numbersView.setOnClickListener(numbersListener);
+        numbersView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Start numbers activity
+                Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
+                startActivity(numbersIntent);
+            }
+        });
+
+        TextView colorsView = (TextView)findViewById(R.id.colors);
+        colorsView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Start numbers activity
+                Intent colorsIntent = new Intent(MainActivity.this, ColorsActivity.class);
+                startActivity(colorsIntent);
+            }
+        });
+
+        TextView familyView = (TextView)findViewById(R.id.family);
+        familyView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Start numbers activity
+                Intent familyIntent = new Intent(MainActivity.this, FamilyActivity.class);
+                startActivity(familyIntent);
+            }
+        });
+
+        TextView phrasesView = (TextView)findViewById(R.id.phrases);
+        phrasesView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Start numbers activity
+                Intent phrasesIntent = new Intent(MainActivity.this, PhrasesActivity.class);
+                startActivity(phrasesIntent);
+            }
+        });
+
+
     }
-
-    //https://developer.android.com/guide/topics/ui/ui-events.html
-    private View.OnClickListener numbersListener = new View.OnClickListener() {
-        public void onClick(View view) {
-            //Display quick little message
-            Toast.makeText(view.getContext(), "Open the list of numbers", Toast.LENGTH_SHORT).show();
-
-            // Start numbers activity
-            //Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
-            //startActivity(numbersIntent);
-        }
-    };
 }
