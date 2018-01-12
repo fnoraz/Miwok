@@ -19,20 +19,20 @@ public class NumbersActivity extends AppCompatActivity {
 
         //ArrayList of words
         ArrayList<Word> words = new ArrayList<Word>();
-        words.add(new Word("one", "Un"));
-        words.add(new Word("Two", "Deux"));
-        words.add(new Word("Three", "Trois"));
-        words.add(new Word("Four", "Quatre"));
-        words.add(new Word("Five", "Cinq"));
-        words.add(new Word("Six", "Six"));
-        words.add(new Word("Seven", "Sept"));
-        words.add(new Word("Eight", "Huit"));
-        words.add(new Word("Nine", "Neuf"));
-        words.add(new Word("Ten", "Dix"));
+        words.add(new Word("one", "un"));
+        words.add(new Word("Two", "deux"));
+        words.add(new Word("Three", "trois"));
+        words.add(new Word("Four", "quatre"));
+        words.add(new Word("Five", "cinq"));
+        words.add(new Word("Six", "six"));
+        words.add(new Word("Seven", "sept"));
+        words.add(new Word("Eight", "huit"));
+        words.add(new Word("Nine", "neuf"));
+        words.add(new Word("Ten", "dix"));
 
         //https://developer.android.com/guide/topics/ui/declaring-layout.html#AdapterViews
         WordAdapter adapter = new WordAdapter(this, words);
-        ListView listView = (ListView) findViewById(R.id.list);
+        ListView listView = (ListView) findViewById(R.id.list_numbers);
         listView.setAdapter(adapter);
     }
 }
