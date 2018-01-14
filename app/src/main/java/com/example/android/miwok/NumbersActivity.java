@@ -18,21 +18,21 @@ public class NumbersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_numbers);
 
         //ArrayList of words
-        ArrayList<String> words = new ArrayList<String>();
-        words.add("One");
-        words.add("Two");
-        words.add("Three");
-        words.add("Four");
-        words.add("Five");
-        words.add("Six");
-        words.add("Seven");
-        words.add("Eight");
-        words.add("Nine");
-        words.add("Ten");
+        ArrayList<Word> words = new ArrayList<Word>();
+        words.add(new Word("one", "un"));
+        words.add(new Word("Two", "deux"));
+        words.add(new Word("Three", "trois"));
+        words.add(new Word("Four", "quatre"));
+        words.add(new Word("Five", "cinq"));
+        words.add(new Word("Six", "six"));
+        words.add(new Word("Seven", "sept"));
+        words.add(new Word("Eight", "huit"));
+        words.add(new Word("Nine", "neuf"));
+        words.add(new Word("Ten", "dix"));
 
         //https://developer.android.com/guide/topics/ui/declaring-layout.html#AdapterViews
-        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, words);
-        ListView listView = (ListView) findViewById(R.id.list);
-        listView.setAdapter(itemsAdapter);
+        WordAdapter adapter = new WordAdapter(this, words);
+        ListView listView = (ListView) findViewById(R.id.list_numbers);
+        listView.setAdapter(adapter);
     }
 }
